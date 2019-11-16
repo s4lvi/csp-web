@@ -1,5 +1,5 @@
 <div class="canvas-container">
-    <canvas id="can" width="400" height="400" style="border:2px solid;" (click)="annotate($event)"></canvas>
+    <canvas #canvas id="can" width="400" height="400" style="border:2px solid;" (click)="annotate($event)"></canvas>
     <div class="canvas-tools">
         <div class="labels">
             <div class="label" *ngFor="let label of labels" 
