@@ -7,18 +7,23 @@ import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 })
 export class DlcAnnotateComponent implements OnInit {
   
-  labels : AnnotationLabel[] = [{name: "head", color:"blue"},
+  @ViewChild('canvas') canvasRef: ElementRef;
+  public context: CanvasRenderingContext2D;
+
+  private labels : AnnotationLabel[] = [{name: "head", color:"blue"},
                                 {name: "eyes", color:"red"},
                                 {name: "hand", color:"green"},
                                 {name: "foot", color:"yellow"}];
                                 
-  annotatedFrames : AnnotatedFrame[] = [];
+  private annotatedFrames : AnnotatedFrame[] = [];
 
+  private currentLabel : AnnotationLabel;
 
   constructor() {
   }
 
-  ngOnInit() {  
+  ngOnInit() { 
+    this.currentLabel = this.labels.length > 0 ? this.labels[0] : {name: "label", color: "red"}; 
   }
 
   annotate(e) {
