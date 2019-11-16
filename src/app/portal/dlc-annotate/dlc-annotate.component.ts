@@ -21,6 +21,10 @@ export class DlcAnnotateComponent implements OnInit {
   ngOnInit() {  
   }
 
+  annotate(e) {
+    console.log(e);
+  }
+
 }
 
 class AnnotationLabel {
