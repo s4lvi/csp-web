@@ -7,7 +7,9 @@ import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 })
 export class DlcAnnotateComponent implements OnInit {
   
-  @ViewChild('canvas') canvasRef: ElementRef;
+  @ViewChild('canvas', {
+    static: false
+  }) canvasRef: ElementRef;
   public context: CanvasRenderingContext2D;
 
   private labels : AnnotationLabel[] = [{name: "head", color:"blue"},
