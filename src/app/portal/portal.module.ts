@@ -1,14 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DlcAnnotateComponent } from './dlc-annotate/dlc-annotate.component';
-import { UserBarComponent } from './user-bar/user-bar.component';
+import { UserBarComponent } from '../common-components/user-bar/user-bar.component';
+import { CommonComponentsModule } from '../common-components/common-components.module';
 
 
 
 @NgModule({
-  declarations: [DlcAnnotateComponent, UserBarComponent],
+  declarations: [DlcAnnotateComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    CommonComponentsModule
   ]
 })
 export class PortalModule { }
