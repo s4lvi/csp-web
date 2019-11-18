@@ -1,18 +1,18 @@
 <div class="canvas-container">
-    <canvas #canvas id="can" width="400" height="400" style="border:2px solid;" (click)="annotate($event)"></canvas>
+    <canvas #canvas id="canvas" width="1280" height="720" style="background-color:#fff;" (click)="annotate($event)"></canvas>
     <div class="canvas-tools">
         <div class="labels">
             <div class="label" *ngFor="let label of labels" 
                 id="{{label.name}}" 
                 [style.background]="label.color"
-                onclick="color(this)">{{label.name}}</div>
+                (click)="selectLabel(label.name)">{{label.name}}</div>
         </div>
     
         <div>
-            <button>< prev frame</button>
-            <button>> next frame</button>
-            <input type="button" value="save" id="btn" size="30" onclick="save()">
-            <input type="button" value="clear" id="clr" size="23" onclick="erase()">
+            <button (click)="prevFrame()">< prev frame</button>
+            <button (click)="nextFrame()">> next frame</button>
+            <input type="button" value="save" id="btn" size="30" (click)="save()">
+            <input type="button" value="clear" id="clr" size="23" (click)="erase()">
         </div>
     </div>
 </div>

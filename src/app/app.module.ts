@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AdminModule } from './admin/admin.module';
 import { PortalModule } from './portal/portal.module';
-
 @NgModule({
   declarations: [
     AppComponent
