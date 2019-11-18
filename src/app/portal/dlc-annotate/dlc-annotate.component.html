@@ -1,3 +1,4 @@
+<app-user-bar></app-user-bar>
 <div class="canvas-container">
     <canvas #canvas id="canvas" width="1280" height="720" style="background-color:#fff;" (click)="annotate($event)"></canvas>
     <div class="canvas-tools">
@@ -8,11 +9,12 @@
                 (click)="selectLabel(label.name)">{{label.name}}</div>
         </div>
     
-        <div>
+        <div class="frame-navigation">
             <button (click)="prevFrame()">< prev frame</button>
             <button (click)="nextFrame()">> next frame</button>
-            <input type="button" value="save" id="btn" size="30" (click)="save()">
             <input type="button" value="clear" id="clr" size="23" (click)="erase()">
         </div>
+
+        <input type="button" value="submit" id="btn" size="30" (click)="save()">
     </div>
 </div>

@@ -26,6 +26,9 @@ export class DlcAnnotateComponent implements AfterViewInit {
 
   ngAfterViewInit() { 
     this.context = (this.canvasRef.nativeElement as HTMLCanvasElement).getContext('2d');
+    this.context.font = "20px sans-serif";
+    this.context.textAlign = "center";
+    this.context.fillText("No Frames Loaded", this.canvasRef.nativeElement.width/2, this.canvasRef.nativeElement.height/2);
     this.currentLabel = this.labels.length > 0 ? this.labels[0] : new AnnotationLabel("defaultLabel", "red"); 
     if (this.annotatedFrames.length == 0) {
       var imageUrl1 = "assets/cuttlefish.jpg";
@@ -50,7 +53,7 @@ export class DlcAnnotateComponent implements AfterViewInit {
   }
 
   annotate(e) {
-    this.annotatedFrames[this.currentFrame].annotations.push(new Annotation(e.pageX, e.pageY, this.currentLabel));
+    this.annotatedFrames[this.currentFrame].annotations.push(new Annotation(e.layerX-2, e.layerY-3, this.currentLabel));
     this.refreshImage();
   }
 
@@ -59,7 +62,7 @@ export class DlcAnnotateComponent implements AfterViewInit {
     this.annotatedFrames[this.currentFrame].annotations.forEach(annotation => {
       this.context.fillStyle = annotation.label.color;
       this.context.beginPath();
-      this.context.arc(annotation.x, annotation.y, 5, 0, 2 * Math.PI);
+      this.context.arc(annotation.x, annotation.y, 4, 0, 2 * Math.PI);
       this.context.fill();
     });
   }
