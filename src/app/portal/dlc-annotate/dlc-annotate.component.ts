@@ -14,8 +14,8 @@ export class DlcAnnotateComponent implements AfterViewInit {
 
   private labels : AnnotationLabel[] = [{name: "head", color:"blue"},
                                 {name: "eyes", color:"red"},
-                                {name: "hand", color:"green"},
-                                {name: "foot", color:"yellow"}];
+                                {name: "label 3", color:"green"},
+                                {name: "label 4", color:"yellow"}];
                                 
   private annotatedFrames : AnnotatedFrame[] = [];
   private currentLabel : AnnotationLabel;

@@ -1,5 +1,8 @@
 <div class="canvas-container">
     <canvas #canvas id="canvas" width="1280" height="720" style="background-color:#fff;" (click)="annotate($event)"></canvas>
+    <div class="info-box">
+        frame {{currentFrame + 1}} / {{annotatedFrames.length}}
+    </div>
     <div class="canvas-tools">
         <div class="labels">
             <div class="label" *ngFor="let label of labels" 
