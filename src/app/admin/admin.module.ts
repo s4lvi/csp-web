@@ -4,14 +4,18 @@ import { CreateProjectComponent } from './create-project/create-project.componen
 import { CreateUserComponent } from './create-user/create-user.component';
 import { ManageComponent } from './manage/manage.component';
 import { RouterModule } from '@angular/router';
-
+import {MatFormFieldModule, MatInputModule, MatButtonModule, MatCardModule} from '@angular/material/';
 
 
 @NgModule({
   declarations: [CreateProjectComponent, CreateUserComponent, ManageComponent],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    MatCardModule
   ]
 })
 export class AdminModule { }

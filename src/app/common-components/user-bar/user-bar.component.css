@@ -4,7 +4,7 @@
 }
 
 #container {
-    text-align: center;
+    display:flex;
     width: 100%;
     position: fixed;
     left: 0;
@@ -13,18 +13,11 @@
     background-color: #bfc3ca;
 }
 
-#menu {
-    border-radius: 4px;
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    top: 5px;
-    left: 5px;
-    background-color: #dadfe7;
-}
 
 #user {
     position: absolute;
+    display: flex;
+    justify-content: center;
     width: 50px;
     height: 50px;
     top: 5px;

@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { AdminModule } from './admin/admin.module';
 import { PortalModule } from './portal/portal.module';
 import { CommonComponentsModule } from './common-components/common-components.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent
@@ -15,7 +16,8 @@ import { CommonComponentsModule } from './common-components/common-components.mo
     AppRoutingModule,
     AdminModule,
     PortalModule,
-    CommonComponentsModule
+    CommonComponentsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

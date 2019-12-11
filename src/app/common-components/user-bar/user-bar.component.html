@@ -1,9 +1,12 @@
 <div id="container">
-    <button id="menu">
-        <p>menu</p><img src="">
-    </button>
-    <div id="user">
-        <p>user</p><img src="">
-    </div>
+        <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item>View All Projects</button>
+            <button mat-menu-item>My Projects</button>
+            <button mat-menu-item>New Project</button>
+        </mat-menu>
+        <div id="user">
+            <p>user</p><img src="">
+        </div>
 </div>
 <div id="spacer"></div>
