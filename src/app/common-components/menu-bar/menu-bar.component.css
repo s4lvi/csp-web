@@ -25,3 +25,10 @@
     border-radius: 100%;
     background-color: #dadfe7;
 }
+
+
+#user img {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}

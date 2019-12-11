@@ -5,10 +5,11 @@ import { CreateUserComponent } from './create-user/create-user.component';
 import { ManageComponent } from './manage/manage.component';
 import { RouterModule } from '@angular/router';
 import {MatFormFieldModule, MatInputModule, MatButtonModule, MatCardModule} from '@angular/material/';
+import { ProjectListComponent } from './project-list/project-list.component';
 
 
 @NgModule({
-  declarations: [CreateProjectComponent, CreateUserComponent, ManageComponent],
+  declarations: [CreateProjectComponent, CreateUserComponent, ManageComponent, ProjectListComponent],
   imports: [
     CommonModule,
     RouterModule,
