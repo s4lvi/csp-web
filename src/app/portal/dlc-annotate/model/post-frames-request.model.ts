@@ -1,11 +1,8 @@
-import { AnnotatedFrame } from './annotated-frame.model';
+import { AnnotatedFrame } from '../dlc-annotate.component';
 
-export class PostFramesRequest {
+
+export interface PostFramesRequest {
     frames: AnnotatedFrame[];
     userId: string;
     projectId: string;
-
-    constructor() {
-        
-    }
 }

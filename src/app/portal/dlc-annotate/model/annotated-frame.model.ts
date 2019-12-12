@@ -1,11 +1,7 @@
 import { Annotation } from './annotation.model';
 
-export class AnnotatedFrame {
+export interface AnnotatedFrame {
     image: string;
     annotations: Annotation[];
     projectId: string;
-
-    constructor() {
-
-    }
 }
