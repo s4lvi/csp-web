@@ -66,10 +66,12 @@ export class DlcAnnotateComponent implements AfterViewInit {
         console.log(res);
         res.frames.forEach(f => {
           this.recievedFrames.push(new AnnotatedFrame(
+            f.imageId,
             f.image,
             []
           ));
           this.annotatedFrames.push(new LocalAnnotatedFrame(
+            f.imageId,
             this.base64ToImage(f.image),
             f.annotations
           ))
@@ -134,7 +136,7 @@ export class DlcAnnotateComponent implements AfterViewInit {
     let newFrames: AnnotatedFrame[] = [];
     frames.forEach((f, i) => {
       newFrames.push(
-        new AnnotatedFrame(this.recievedFrames[i].image, f.annotations)
+        new AnnotatedFrame(f.imageId, this.recievedFrames[i].image, f.annotations)
       )
     })
     return newFrames;
@@ -152,20 +154,24 @@ class AnnotationLabel {
 }
 
 export class AnnotatedFrame {
+  imageId: string;
   image: string;
   annotations: Annotation[];
 
-  constructor(image: string, annotations: Annotation[]) {
+  constructor(imageId: string, image: string, annotations: Annotation[]) {
+    this.imageId = imageId;
     this.image = image;
     this.annotations = annotations;
   }
 }
 
 class LocalAnnotatedFrame {
+  imageId: string;
   image: HTMLImageElement;
   annotations: Annotation[];
 
-  constructor(image: HTMLImageElement, annotations: Annotation[]) {
+  constructor(imageId: string, image: HTMLImageElement, annotations: Annotation[]) {
+    this.imageId = imageId;
     this.image = image;
     this.annotations = annotations;
   }
