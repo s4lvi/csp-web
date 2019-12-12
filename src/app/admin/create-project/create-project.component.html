@@ -10,8 +10,10 @@
             <textarea matInput></textarea>
         </mat-form-field><br />
         <mat-form-field>
-            <mat-label>Project Title</mat-label>
-            <input matInput>
+            <mat-label>Project Type</mat-label>
+            <mat-select>
+                <mat-option>DeepLabCut</mat-option>
+            </mat-select>
         </mat-form-field><br />
         <button mat-button color="primary" (click)="submit()">Submit</button>
     </form>

@@ -4,7 +4,7 @@ import { CreateProjectComponent } from './create-project/create-project.componen
 import { CreateUserComponent } from './create-user/create-user.component';
 import { ManageComponent } from './manage/manage.component';
 import { RouterModule } from '@angular/router';
-import {MatFormFieldModule, MatInputModule, MatButtonModule, MatCardModule} from '@angular/material/';
+import {MatFormFieldModule, MatInputModule, MatButtonModule, MatCardModule, MatSelectModule} from '@angular/material/';
 import { ProjectListComponent } from './project-list/project-list.component';
 
 
@@ -16,7 +16,8 @@ import { ProjectListComponent } from './project-list/project-list.component';
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    MatSelectModule
   ]
 })
 export class AdminModule { }
