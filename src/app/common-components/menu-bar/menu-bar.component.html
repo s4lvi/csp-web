@@ -1,19 +1,18 @@
 <div id="container">
-        {{this.user.loggedIn}}
-        <button *ngIf="user.loggedIn" mat-button [matMenuTriggerFor]="menu">Menu</button>
-        <mat-menu  *ngIf="user.loggedIn" #menu="matMenu">
-            <button *ngIf="user.role == 'ADMIN'" mat-menu-item (click)="home()">Home</button>
-            <button *ngIf="user.role == 'ADMIN'" mat-menu-item (click)="myProjects()">My Projects</button>
-            <button *ngIf="user.role == 'ADMIN'" mat-menu-item (click)="newProject()">New Project</button>
+        <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+        <mat-menu  #menu="matMenu">
+            <button mat-menu-item (click)="home()">Home</button>
+            <button mat-menu-item (click)="myProjects()">My Projects</button>
+            <button mat-menu-item (click)="newProject()">New Project</button>
         </mat-menu>
         <div id="user" [matMenuTriggerFor]="user">
             <img src="assets/profile.png">
         </div>
         <mat-menu #user="matMenu">
-            <button *ngIf="user.loggedIn" disabled mat-menu-item>{{ user.name }}</button>
-            <button *ngIf="user.loggedIn" mat-menu-item (click)="settings()">Settings</button>
-            <button *ngIf="user.loggedIn" mat-menu-item (click)="logout()">Log Out</button>
-            <button *ngIf="!user.loggedIn" mat-menu-item (click)="login()">Log In</button>
+            <button disabled mat-menu-item>test user</button>
+            <button mat-menu-item (click)="settings()">Settings</button>
+            <button mat-menu-item (click)="logout()">Log Out</button>
+            <button *ngIf="user.loggedIn" mat-menu-item (click)="login()">Log In</button>
         </mat-menu>
 </div>
 <div id="spacer"></div>

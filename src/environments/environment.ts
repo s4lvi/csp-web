@@ -3,7 +3,14 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  auth: {
+    clientID: '3mE3jZQG5vTphM8RAno8x7GcyGISVB80',
+    domain: 'https://salvi-csp.auth0.com/', // e.g., https://you.auth0.com/
+    audience: 'http://localhost:3001', // e.g., http://localhost:3001
+    redirect: 'http://localhost:4200/',
+    scope: 'jordansalvi@gmail.com'
+  }
 };
 
 /*

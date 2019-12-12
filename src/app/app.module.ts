@@ -7,6 +7,7 @@ import { AdminModule } from './admin/admin.module';
 import { PortalModule } from './portal/portal.module';
 import { CommonComponentsModule } from './common-components/common-components.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AuthenticationService } from './common-components/authentication.service';
 @NgModule({
   declarations: [
     AppComponent
@@ -19,7 +20,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CommonComponentsModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [AuthenticationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

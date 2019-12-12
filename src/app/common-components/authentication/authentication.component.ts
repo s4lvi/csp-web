@@ -19,6 +19,7 @@ export class AuthenticationComponent implements OnInit {
       console.log(p);
       if (p.type == "login") {
         console.log("login");
+        
       }
       if (p.type == "logout") {
         console.log("logout");
