@@ -29,7 +29,7 @@ export class MenuBarComponent implements OnInit {
   }
 
   newProject() {
-    this.router.navigateByUrl('admin/create-project');
+    this.router.navigateByUrl('admin/projects/news');
   }
 
   home() {
@@ -37,11 +37,11 @@ export class MenuBarComponent implements OnInit {
   }
 
   newUser() {
-
+    this.router.navigateByUrl('admin/users/new');
   }
 
   manageUsers() {
-    
+    this.router.navigateByUrl('admin/users');
   }
 
   logout() {

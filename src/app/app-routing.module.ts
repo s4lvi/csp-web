@@ -10,8 +10,8 @@ import { AuthenticationComponent } from './common-components/authentication/auth
 
 const routes: Routes = [
   { path : '', component: AppComponent },
-  { path : 'admin/create-project', component: CreateProjectComponent},
-  { path : 'admin/create-user', component: CreateUserComponent},
+  { path : 'admin/projects/new', component: CreateProjectComponent},
+  { path : 'admin/users/new', component: CreateUserComponent},
   { path : 'admin/manage', component: ManageComponent},
   { path : 'admin/projects', component: ProjectListComponent},
   { path : 'admin', redirectTo: 'admin/manage'},
