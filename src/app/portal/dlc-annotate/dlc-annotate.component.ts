@@ -86,6 +86,8 @@ export class DlcAnnotateComponent implements AfterViewInit {
         this.framesLoaded = true;
         if (res.length == 0) {
           this.fallBackLocalFrames();
+        } else {
+          this.refreshImage();
         }
       }
     )

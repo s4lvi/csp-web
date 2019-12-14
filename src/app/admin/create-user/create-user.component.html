@@ -1,1 +1,31 @@
-<p>create-user works!</p>
+<mat-card id="formCard">
+    <mat-card-title>Create Project</mat-card-title>
+    <form id="newUserForm">
+        <mat-form-field>
+            <mat-label>Username</mat-label>
+            <input matInput>
+        </mat-form-field><br />
+        <mat-form-field>
+            <mat-label>First Name</mat-label>
+            <input matInput>
+        </mat-form-field><br />
+        <mat-form-field>
+            <mat-label>Last Name</mat-label>
+            <input matInput>
+        </mat-form-field><br />
+        <mat-form-field>
+            <mat-label>Email Address</mat-label>
+            <input matInput>
+        </mat-form-field><br />
+        <mat-form-field>
+            <mat-label>Role</mat-label>
+            <mat-select>
+                <mat-option>Administrator</mat-option>
+                <mat-option>Student</mat-option>
+                <mat-option>Instructor</mat-option>
+                <mat-option>Manager</mat-option>
+            </mat-select>
+        </mat-form-field><br />
+        <button mat-button color="primary" (click)="submit()">Submit</button>
+    </form>
+</mat-card>
