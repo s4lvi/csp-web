@@ -36,6 +36,14 @@ export class MenuBarComponent implements OnInit {
     this.router.navigateByUrl('admin');
   }
 
+  newUser() {
+
+  }
+
+  manageUsers() {
+    
+  }
+
   logout() {
     //this.router.navigate(['auth'], { queryParams: {type: 'logout'}});
     this.user = {name: "testuser", role: Role.ADMIN, loggedIn: true};
